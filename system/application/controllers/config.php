@@ -73,7 +73,7 @@ $config['layout'] = "default";
 
 
 /*URL of website including http://*/
-$config['website'] = "http://127.0.0.1/ide_aac";
+$config['website'] = "http://127.0.0.1/";
 
 
 /*Title of a website*/

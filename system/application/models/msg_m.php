@@ -1,5 +1,5 @@
 <?php 
-	class Msg_m extends Model {
+	class Msg_m extends CI_Model {
 		
 		public function __construct() {
 			parent::__construct();

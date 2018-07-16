@@ -61,33 +61,33 @@ $_smarty_tpl->decodeProperties(array (
 ">Inicio</a></li>				
 					<?php if ($_smarty_tpl->getVariable('logged')->value==1){?>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/account">Conta</a></li>
+index.php/account">Conta</a></li>
 					<?php }else{ ?>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/account/create">Criar Conta</a></li>
+index.php/account/create">Criar Conta</a></li>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/account/login">Logar</a></li>
+index.php/account/login">Logar</a></li>
 					<?php }?>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/character/view">Personagens</a></li>
+index.php/character/view">Personagens</a></li>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/guilds">Guildas</a></li>
+index.php/guilds">Guildas</a></li>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/bugtracker">Bug Tracker</a></li>	
+index.php/bugtracker">Bug Tracker</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/p/v/fragers">Top fraggers</a></li>	
+index.php/p/v/fragers">Top fraggers</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/video">Videos</a></li>	
+index.php/video">Videos</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/houses/main">Casas</a></li>	
+index.php/houses/main">Casas</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/p/v/deaths">Últimas mortes</a></li>	
+index.php/p/v/deaths">Últimas mortes</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/p/v/gallery">Galeria</a></li>	
+index.php/p/v/gallery">Galeria</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/p/v/gifts">Shop</a></li>	
+index.php/p/v/gifts">Shop</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/profile/community">Comunidade</a></li>	
+index.php/profile/community">Comunidade</a></li>	
 				</ul>	
 			</div>
 			<div id="conteudo">
@@ -127,9 +127,6 @@ if (count($_from) > 0){
 			Page rendered in: <?php echo $_smarty_tpl->getVariable('renderTime')->value;?>
 
 			<?php echo $_smarty_tpl->getVariable('admin')->value;?>
-<br />
-			Optimizado por <a href="http://www.xtibia.com/forum/user/336584-avuenja/" target="_blank">Avuenja</a>.
-			</div>
 		</div>
 	</body>
 </html>

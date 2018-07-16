@@ -1,6 +1,6 @@
 <?php 
 
-class Load_Scaffolding extends Controller {
+class Load_Scaffolding extends CI_Controller {
 	
 	function Load_Scaffolding() {
 		$ide = new IDE;

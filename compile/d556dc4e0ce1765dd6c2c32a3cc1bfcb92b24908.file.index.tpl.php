@@ -48,31 +48,31 @@ $_smarty_tpl->decodeProperties(array (
 ">Home</a></li>				
 					<?php if ($_smarty_tpl->getVariable('logged')->value==1){?>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/account">Account</a></li>
+index.php/account">Account</a></li>
 					<?php }else{ ?>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/account/create">Create Account</a></li>
+index.php/account/create">Create Account</a></li>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/account/login">Login</a></li>
+index.php/account/login">Login</a></li>
 					<?php }?>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/character/view">Characters</a></li>
+index.php/character/view">Characters</a></li>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/guilds">Guilds</a></li>
+index.php/guilds">Guilds</a></li>
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/bugtracker">Bug Tracker</a></li>	
+index.php/bugtracker">Bug Tracker</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/p/v/fragers">Top fraggers</a></li>	
+index.php/p/v/fragers">Top fraggers</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/video">Videos</a></li>	
+index.php/video">Videos</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/houses/main">Houses</a></li>	
+index.php/houses/main">Houses</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/p/v/deaths">Latest Deaths</a></li>	
+index.php/p/v/deaths">Latest Deaths</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/p/v/gallery">Gallery</a></li>	
+index.php/p/v/gallery">Gallery</a></li>	
 					<li><a href="<?php echo $_smarty_tpl->getVariable('path')->value;?>
-/index.php/profile/community">Community</a></li>	
+index.php/profile/community">Community</a></li>	
 				</ul>	
 			</div>
 			<div id="conteudo">

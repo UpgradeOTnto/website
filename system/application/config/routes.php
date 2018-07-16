@@ -1,5 +1,6 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-require(FCPATH."config.php");
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -10,7 +11,7 @@ require(FCPATH."config.php");
 | and its corresponding controller class/method. The segments in a
 | URL normally follow this pattern:
 |
-| 	example.com/class/method/id/
+|	example.com/class/method/id/
 |
 | In some instances, however, you may want to remap this relationship
 | so that a different class/function is called than the one
@@ -18,13 +19,13 @@ require(FCPATH."config.php");
 |
 | Please see the user guide for complete details:
 |
-|	http://codeigniter.com/user_guide/general/routing.html
+|	https://codeigniter.com/user_guide/general/routing.html
 |
 | -------------------------------------------------------------------------
 | RESERVED ROUTES
 | -------------------------------------------------------------------------
 |
-| There are two reserved routes:
+| There are three reserved routes:
 |
 |	$route['default_controller'] = 'welcome';
 |
@@ -32,18 +33,23 @@ require(FCPATH."config.php");
 | URI contains no data. In the above example, the "welcome" class
 | would be loaded.
 |
-|	$route['scaffolding_trigger'] = 'scaffolding';
+|	$route['404_override'] = 'errors/page_missing';
 |
-| This route lets you set a "secret" word that will trigger the
-| scaffolding feature for added security. Note: Scaffolding must be
-| enabled in the controller in which you intend to use it.   The reserved 
-| routes must come before any wildcard or regular expression routes.
+| This route will tell the Router which controller/method to use if those
+| provided in the URL cannot be matched to a valid route.
 |
+|	$route['translate_uri_dashes'] = FALSE;
+|
+| This is not exactly a route, but allows you to automatically route
+| controller and method names that contain dashes. '-' isn't a valid
+| class or method name character, so it requires translation.
+| When you set this option to TRUE, it will replace ALL dashes in the
+| controller and method URI segments.
+|
+| Examples:	my-controller/index	-> my_controller/index
+|		my-controller/my-method	-> my_controller/my_method
 */
-
-$route['default_controller'] = $config['engine']['default_controller'];
-$route['scaffolding_trigger'] = $config['scaffolding_trigger'];
-
-
-/* End of file routes.php */
-/* Location: ./system/application/config/routes.php */
+//$route['default_controller'] = "home";
+$route['default_controller'] = 'home';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;

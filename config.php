@@ -2,17 +2,17 @@
 /*These configs are neccessary in order to make Modern AAC work.*/
 
 /*URL of website including http:// and without slash at the end! */
-$config['website'] = $config['website'] = 'http://'.$_SERVER['HTTP_HOST'] . '/'.trim(dirname($_SERVER['SCRIPT_NAME']), '/.\\');
-
+//$config['website'] = 'http://'.$_SERVER['HTTP_HOST'] . '/'.trim(dirname($_SERVER['SCRIPT_NAME']), '/.\\');
+$config['website'] = 'http://'.$_SERVER['HTTP_HOST'] . ''.trim(dirname($_SERVER['SCRIPT_NAME']), '/.\\');
 
 /*Database information*/
 $config['database']['host'] = "127.0.0.1";
 $config['database']['login'] = "root";
 $config['database']['password'] = "";
-$config['database']['database'] = "sites";
+$config['database']['database'] = "narutowhite";
 
 /*Name of server*/
-$config['server_name'] = "Avuenja";
+$config['server_name'] = "Modern Acc";
 
 /*End of most important configs*/
 
@@ -89,7 +89,7 @@ $config['commentLimit'] = 10;
 $config['layout'] = "avu";
 
 /*Title of a website*/
-$config['title'] = "Avuenja - Web Alternative.";
+$config['title'] = "Modern Acc - Web Alternative.";
 
 
 /*Premdays given when creating new account.*/

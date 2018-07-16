@@ -126,12 +126,12 @@ if(empty($_SESSION['access'])) $_SESSION['access'] = 0;
 |
 */
 
-
 define('EXT', '.php');
 define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 define('FCPATH', str_replace(SELF, '', __FILE__));
 define('BASEPATH', $system_folder.'/');
 define('CURRENT', "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
+define('ENVIRONMENT', 'production');
 if (is_dir($application_folder))
 {
 	define('APPPATH', $application_folder.'/');
@@ -144,7 +144,8 @@ else
 	}
 	define('APPPATH', BASEPATH.$application_folder.'/');
 }
-require_once(APPPATH.'/libraries/system.php');
+
+require_once(APPPATH.'libraries/system.php');
 $ide = new IDE;
 if(!DEFINED("SYSTEM_STOP")) {
 if(!@is_array($_SESSION['actions'])) $_SESSION['actions'] = array();
@@ -159,10 +160,13 @@ if(@count($_SESSION['actions']) > $config['actionsCount'])
 |
 | And away we go...
 |
+/usr/nginx/html/system/application/errors/error_php.php
 */
+define('VIEWPATH', BASEPATH . 'application/views/');
+//$config['error_views_path'] = 'system/application';
 require_once(APPPATH.'/libraries/Smarty.class.php');
 require(APPPATH."libraries/POT/OTS.php");
-require_once BASEPATH.'codeigniter/CodeIgniter'.EXT;
+require_once BASEPATH.'/core/CodeIgniter'.EXT;
 if(DEFINED('TITLE')) $config['title'] = TITLE;
 $ide->loadEvent("onLoad");
 
@@ -181,6 +185,7 @@ if(!DEFINED("SYSTEM_STOP")) {
 $contents = ob_get_contents();
 $contents = wordWrapIgnoreHTML($contents, $config['wrap_words'], '<br />'); 
 ob_end_clean();
+
 require_once(APPPATH.'config/database.php');
 /* Some basic actions */
 if(empty($_SESSION['logged'])) $_SESSION['logged'] = 0;
